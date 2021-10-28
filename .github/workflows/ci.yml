@@ -9,9 +9,19 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
-        with:
-          python-version: 3.x
-      - run: pip install mkdocs-material 
-      - run: mkdocs gh-deploy --force
+#       - uses: actions/checkout@v2
+#       - uses: actions/setup-python@v2
+#         with:
+#           python-version: 3.x
+#       - run: pip install mkdocs-material 
+#       - run: mkdocs gh-deploy --force
+        - name: Checkout 
+          uses: actions/checkout@v2 # Required to mount the Github Workspace to a volume 
+        - uses: addnab/docker-run-action@v3
+          with:
+            registry: registry.hub.docker.com
+            image: dimayasenko/mkdocs-material:latest
+            options: -v ${{ github.workspace }}:/docs -e ABC=123
+            run: |
+              gh-deploy --force
+              
