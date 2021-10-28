@@ -22,5 +22,5 @@ jobs:
             registry: registry.hub.docker.com
             image: dimayasenko/mkdocs-material:latest
             options: -v ${{ github.workspace }}:/docs -e ABC=123
-            run: mkdocs gh-deploy --force
+            run: sudo mkdocs gh-deploy --force
               
