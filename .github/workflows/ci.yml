@@ -15,7 +15,7 @@ jobs:
         with:
           registry: registry.hub.docker.com
           image: dimayasenko/mkdocs-material:latest
-          options: -v ${{ github.workspace }}:/docs -e ABC=123
+          options: --user root -v ${{ github.workspace }}:/docs:rw -e ABC=123
           run: mkdocs build
       - run: ghp-import -o /site
               
