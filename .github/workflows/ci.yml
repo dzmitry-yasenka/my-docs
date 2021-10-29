@@ -21,6 +21,11 @@ jobs:
           image: dimayasenko/mkdocs-material:latest
           options: --user root -v ${{ github.workspace }}:/docs:rw -e ABC=123
           run: mkdocs build
-      - run: ls
-      - run: ghp-import -o site
+#       - run: ls
+#       - run: ghp-import -o site
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          branch: gh-pages 
+          folder: site
               
