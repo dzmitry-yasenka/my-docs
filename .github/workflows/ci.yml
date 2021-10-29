@@ -9,6 +9,10 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+      - run: pip install ghp-import
       - name: Checkout 
         uses: actions/checkout@v2 # Required to mount the Github Workspace to a volume 
       - uses: addnab/docker-run-action@v3
