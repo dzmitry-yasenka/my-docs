@@ -97,3 +97,15 @@ types._
   [10]: code-blocks.md
   [11]: #superfences
   [12]: ../assets/screenshots/diagram.png
+  
+  
+``` mermaid
+stateDiagram-v2
+    [*] --> Still
+    Still --> [*]
+
+    Still --> Moving
+    Moving --> Still
+    Moving --> Crash
+    Crash --> [*]
+```
