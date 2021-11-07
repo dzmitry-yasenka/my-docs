@@ -23,9 +23,7 @@ site_name: Albacore Documentation v1
 site_url: https://albacore-documentation.antech.co.uk
 site_author: DY AM
 site_description: >-
-  Create a branded static site from a set of Markdown files to host the
-  documentation of your Open Source or commercial project – customizable,
-  searchable, mobile-friendly, 40+ languages
+  Get full understanding of how to install, configure and use Albacore software.
 
 # Repository
 # repo_name: squidfunk/mkdocs-material
