@@ -19,9 +19,9 @@
 # IN THE SOFTWARE.
 
 # Project information
-site_name: Albacore Documentation
+site_name: Albacore Documentation v1
 site_url: https://albacore-documentation.antech.co.uk
-site_author: DY
+site_author: DY AM
 site_description: >-
   Create a branded static site from a set of Markdown files to host the
   documentation of your Open Source or commercial project – customizable,
